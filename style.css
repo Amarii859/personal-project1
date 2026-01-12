@@ -1,0 +1,389 @@
+/*
+Theme Name: AC Milan Theme PRO
+Version: 2.0
+*/
+
+/* =========================
+   CSS VARIABLES (PRO MOVE)
+========================= */
+:root {
+    --red: #b30000;
+    --dark-red: #7a0000;
+    --black: #0b0b0b;
+    --white: #ffffff;
+    --gray: #f5f5f5;
+    --text: #1e1e1e;
+    --accent: #ff2a2a;
+
+    --radius: 14px;
+    --radius-sm: 8px;
+    --shadow-soft: 0 10px 30px rgba(0,0,0,.08);
+    --shadow-strong: 0 20px 60px rgba(0,0,0,.18);
+
+    --transition: all .35s cubic-bezier(.4,0,.2,1);
+}
+
+/* =========================
+   GLOBAL RESET
+========================= */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(180deg, #f7f7f7, #ececec);
+    color: var(--text);
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+/* =========================
+   HEADER (HERO STYLE)
+========================= */
+header {
+    position: relative;
+    background: linear-gradient(135deg, var(--red), var(--black));
+    color: var(--white);
+    text-align: center;
+    padding: 90px 20px;
+    overflow: hidden;
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+    opacity: .15;
+}
+
+header h1 {
+    position: relative;
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    text-shadow: 0 10px 30px rgba(0,0,0,.4);
+}
+
+/* =========================
+   NAVIGATION (PREMIUM)
+========================= */
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background: rgba(0,0,0,.92);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 30px rgba(0,0,0,.3);
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 18px 0;
+}
+
+.menu li {
+    margin: 0 22px;
+}
+
+.menu li a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    position: relative;
+    padding: 5px 0;
+    transition: var(--transition);
+}
+
+.menu li a::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -8px;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--red), var(--accent));
+    transition: var(--transition);
+    transform: translateX(-50%);
+}
+
+.menu li a:hover {
+    color: var(--accent);
+}
+
+.menu li a:hover::before {
+    width: 100%;
+}
+
+/* =========================
+   SECTIONS (CARD STYLE)
+========================= */
+.section {
+    background: rgba(255,255,255,.9);
+    backdrop-filter: blur(6px);
+    margin: 60px auto;
+    padding: 50px;
+    max-width: 1100px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-soft);
+    transition: var(--transition);
+    position: relative;
+}
+
+.section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: linear-gradient(135deg, transparent, rgba(179,0,0,.08));
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.section:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-strong);
+}
+
+.section:hover::before {
+    opacity: 1;
+}
+
+.section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.3rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--red);
+}
+
+.section p {
+    font-size: 1.05rem;
+    color: #444;
+}
+
+.section ul li {
+    margin-bottom: 12px;
+    position: relative;
+    padding-left: 18px;
+}
+
+.section ul li::before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: var(--red);
+}
+
+/* =========================
+   BLOG POSTS
+========================= */
+.blog-post {
+    margin-bottom: 40px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.blog-post h3 a {
+    color: var(--black);
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: var(--transition);
+}
+
+.blog-post h3 a:hover {
+    color: var(--red);
+}
+
+/* =========================
+   PAGINATION
+========================= */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.pagination a {
+    margin: 0 6px;
+    padding: 10px 18px;
+    border-radius: 30px;
+    border: 1px solid #ddd;
+    color: var(--red);
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.pagination a:hover {
+    background: var(--red);
+    color: var(--white);
+    border-color: var(--red);
+    transform: translateY(-3px);
+}
+
+/* =========================
+   CONTACT FORM (ELITE)
+========================= */
+.contact-container {
+    max-width: 650px;
+    margin: 100px auto;
+    padding: 55px;
+    background: rgba(255,255,255,.95);
+    backdrop-filter: blur(8px);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-strong);
+}
+
+.contact-container h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 35px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 16px;
+    margin-bottom: 18px;
+    border-radius: var(--radius-sm);
+    border: 1px solid #ddd;
+    font-size: 15px;
+    transition: var(--transition);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--red);
+    box-shadow: 0 0 0 4px rgba(179,0,0,.1);
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 16px;
+    background: linear-gradient(135deg, var(--red), var(--accent));
+    color: var(--white);
+    border: none;
+    border-radius: 30px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.contact-form button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 35px rgba(179,0,0,.4);
+}
+
+/* =========================
+   ALERTS
+========================= */
+.success,
+.error {
+    padding: 14px;
+    border-radius: var(--radius-sm);
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.success {
+    background: #e6f4ea;
+    color: #1e7e34;
+}
+
+.error {
+    background: #fce8e8;
+    color: #a71d2a;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+    background: linear-gradient(135deg, #000, #111);
+    color: #bbb;
+    text-align: center;
+    padding: 35px 20px;
+    margin-top: 80px;
+}
+
+footer p {
+    font-size: .9rem;
+    letter-spacing: 1px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+    header {
+        padding: 60px 20px;
+    }
+
+    .section {
+        padding: 35px 25px;
+        margin: 40px 15px;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+    }
+}
+
+.stadium-page {
+    max-width: 1100px;
+    margin: auto;
+    padding: 40px;
+}
+
+.stadium-hero {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+                url('https://upload.wikimedia.org/wikipedia/commons/6/6e/San_Siro_Stadium.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 80px 20px;
+    text-align: center;
+    color: #fff;
+}
+
+.stadium-hero h1 {
+    font-size: 48px;
+    color: #e60000;
+}
+
+.stadium-info {
+    background: #111;
+    color: #fff;
+    padding: 30px;
+    margin-top: 30px;
+    border-left: 5px solid #e60000;
+}
+
+.stadium-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.stadium-info li {
+    padding: 8px 0;
+}
+
+.stadium-comments {
+    margin-top: 50px;
+}
