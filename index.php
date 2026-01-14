@@ -1,4 +1,6 @@
-<?php get_header(); ?>
+<?php /* Template Name:Home  */
+get_header(); ?>
+
 
 <!-- Hero / Banner with Club Logo -->
 <section style="text-align:center; background:#000; padding:50px;">

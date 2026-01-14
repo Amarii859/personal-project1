@@ -1,5 +1,5 @@
 <?php
-/* Template Name: AC Milan Theme */
+/* Template Name: Contact us  */
 get_header();
 
 $success = '';

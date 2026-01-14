@@ -346,44 +346,36 @@ footer p {
     }
 }
 
-.stadium-page {
-    max-width: 1100px;
-    margin: auto;
-    padding: 40px;
+input, textarea, button {
+    pointer-events: auto !important;
+    opacity: 1 !important;
+    position: relative;
+    z-index: 9999;
 }
 
-.stadium-hero {
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
-                url('https://upload.wikimedia.org/wikipedia/commons/6/6e/San_Siro_Stadium.jpg');
-    background-size: cover;
-    background-position: center;
-    padding: 80px 20px;
-    text-align: center;
-    color: #fff;
-}
-
-.stadium-hero h1 {
-    font-size: 48px;
-    color: #e60000;
-}
-
-.stadium-info {
-    background: #111;
-    color: #fff;
-    padding: 30px;
-    margin-top: 30px;
-    border-left: 5px solid #e60000;
-}
-
-.stadium-info ul {
+.comment-list {
     list-style: none;
-    padding: 0;
+    padding-left: 0;
 }
 
-.stadium-info li {
-    padding: 8px 0;
+.comment {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
 }
 
-.stadium-comments {
-    margin-top: 50px;
+.comment-author {
+    font-weight: bold;
+}
+
+.comment-meta {
+    font-size: 0.85em;
+    color: #555;
+}
+
+.comment-reply-link {
+    font-size: 0.85em;
+    color: blue;
+    text-decoration: underline;
 }
